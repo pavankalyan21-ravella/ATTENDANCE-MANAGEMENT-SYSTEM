@@ -10,7 +10,7 @@ def init_db():
     # Create students table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS students (
-            id INTEGER PRIMARY KEY AUTO_INCREMENT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             roll_no TEXT UNIQUE NOT NULL,
             name TEXT NOT NULL
         )
@@ -18,7 +18,7 @@ def init_db():
     # Create attendance table
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS attendance (
-            id INTEGER PRIMARY KEY AUTO_INCREMENT,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             roll_no TEXT NOT NULL,
             date TEXT NOT NULL,
             status TEXT NOT NULL,
