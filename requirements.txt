@@ -1,0 +1,1 @@
+# No external dependencies required (Uses built-in Tkinter and SQLite3)
