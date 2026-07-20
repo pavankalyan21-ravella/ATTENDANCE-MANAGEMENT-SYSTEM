@@ -1,54 +1,66 @@
 # Attendance Management System
 
-A lightweight, browser-based application for maintaining a class roster and marking daily attendance. It works without a server or account, and keeps information saved in the browser.
+A Python-based application for managing student records and recording daily attendance. The project demonstrates essential Python skills including file handling, list and dictionary management, input validation, table formatting, and persistent data storage.
 
-## Features
+## 🚀 Key Features
 
-- **Add student names** — Create a class roster by entering each student's name.
-- **Mark attendance** — Set every student to **Present** or **Absent**. Select the same status again to return the student to an unmarked state.
-- **Attendance table** — The class roster is displayed in a clean table-style list with each student's name and attendance controls.
-- **Attendance totals** — See the total students, present students, and absent students at a glance.
-- **Data storage** — The roster and attendance selections are stored locally in the browser using `localStorage`, so they remain available after a page refresh.
-- **Remove students** — Remove one student from the roster or clear the complete roster when needed.
+**Add Student Names:** Add student names to create and maintain a class roster.
 
-## How to use
+**Mark Attendance:** Record each student as **Present** or **Absent** for the day.
 
-1. Open `index.html` in any modern web browser.
-2. Type a name in the **Student name** field.
-3. Select **Add student** to add the student to the roster.
-4. Use **Present** or **Absent** beside each student to record today's attendance.
-5. The summary cards update automatically.
+**Attendance Tables:** Display a structured attendance table containing student names and their current attendance status.
 
-## Data table structure
+**Data Storage:** Save student records and attendance data to a local file so information remains available between program runs.
 
-| Field | Description |
+**Attendance Summary:** Calculate and display the total number of students, students present, and students absent.
+
+**Input Validation:** Handles invalid selections and empty student names safely to keep records accurate.
+
+## 📁 Project Structure
+
+```text
+Attendance-Management-System/
+│
+├── attendance_manager.py    # Core Python program for roster and attendance management
+├── attendance_data.json     # Locally stored student and attendance records
+├── attendance_report.txt    # Generated attendance summary report
+└── README.md                # Project documentation
+```
+
+## 📊 Attendance Table
+
+| Student Name | Attendance Status |
 | --- | --- |
-| Student name | The name entered for a student. |
-| Attendance status | One of `Present`, `Absent`, or unmarked. |
+| Aarav Sharma | Present |
+| Meera Patel | Absent |
 
-## Data storage details
+## 💾 Data Storage
 
-The application stores the roster in the current browser under the key `rollcall-students-v1`.
-
-Example stored data:
+Student records are stored locally in `attendance_data.json`. A typical record uses the following format:
 
 ```json
 [
-  { "name": "Aarav Sharma", "status": "present" },
-  { "name": "Meera Patel", "status": "absent" }
+  { "name": "Aarav Sharma", "status": "Present" },
+  { "name": "Meera Patel", "status": "Absent" }
 ]
 ```
 
-> Clearing browser site data or using a different browser/device removes access to this locally stored roster.
+## 🛠️ Tech Stack
 
-## Technology
+**Language:** Python 3.x
 
-- HTML
-- CSS
-- Vanilla JavaScript
-- Browser `localStorage`
+**Storage Format:** JSON and text files
 
-## Running the project
+**Concepts Used:** File I/O, lists, dictionaries, functions, loops, conditionals, exception handling, string formatting, input validation, and automated report generation.
 
-No installation is needed. Download or open the project folder, then double-click `index.html`.
+## ▶️ How to Run
 
+1. Ensure Python 3 is installed.
+2. Open a terminal in the project directory.
+3. Run the application:
+
+```bash
+python attendance_manager.py
+```
+
+4. Follow the menu prompts to add students, mark attendance, view the table, and save data.
